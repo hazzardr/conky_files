@@ -34,6 +34,6 @@ if __name__ == "__main__":
 
     weather_data = get_data(API_KEY)
     with open(f"{DATA_PATH}data", 'w') as final_file:
-        final_file.write(f"{weather_data.get_temperature(unit='celsius')['temp']:.0f}\n")
-        final_file.write(f"{weather_data.get_wind()['speed']*3.6:.1f}\n")
+        final_file.write(f"{weather_data.get_temperature(unit='fahrenheit')['temp']:.0f}\n")
+        final_file.write(f"{weather_data.get_wind()['speed']:.1f}\n")
         final_file.write(f"{weather_data.get_humidity()}%")
